@@ -1,0 +1,709 @@
+*{
+	box-sizing: none;
+	margin: 0;
+}
+
+@font-face {
+    font-family: monserat2;
+    src: url(Montserrat-Black.otf);
+}
+
+@font-face {
+    font-family: monserat3;
+    src: url(Montserrat-Regular.otf);
+}
+
+html{
+	scroll-behavior: smooth;
+}
+
+#membrete{
+	width: 100%;
+	background: #fff;
+	margin-bottom: 20px;
+	text-align: center;
+	display: block;
+}
+header{
+	z-index: 1;
+	height: 50px;
+	position: relative;
+	width: 100%;
+	align-items: center;
+	display: flex;
+	transition: .5 ease;
+	background-color: rgba(14, 93, 158, 0.678);
+	box-shadow:  3px 0px 39px 30px rgb(14, 93, 158, 0.678);
+}
+
+body{
+	background-image: linear-gradient(rgba(0, 0, 0, 0.548) 0%, rgba(0, 0, 0, 0.473) 100%), url("../img/inicio.jpg");
+	background-size:cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	
+}
+#LgoA{
+	width: 70px;
+	margin-left: 30px;
+}
+#Logo{
+	width: 100%;
+}
+
+nav{
+	width: 90%;
+	display: flex;
+    margin: 0;
+	justify-content: center;
+ }
+
+nav a, nav label{
+	margin-left: 20px;
+	margin-right: 20px;
+	text-decoration: none;
+	color: white;
+	cursor: pointer;
+	font-size: 16px;
+	font-weight: 800;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#checkmenu:checked ~ .navmenu{
+		height: 100vh;
+}
+
+.listul {
+	position:absolute;
+	min-width:140px;
+	margin-top: 10px;
+	padding: 0;
+	height: 0;
+	list-style:none;
+	margin-left: -30px;
+	transition: ease .6s;
+	background-color: none;
+	border-radius: 0px 0px 20px 20px;
+	overflow: hidden;
+}
+
+.listul li{
+	margin-top: 20px;
+	padding-left: 20px;
+}
+
+.listul li:last-child{
+	margin-top: 25px;
+	background-color: rgba(14, 93, 158, 0.404);
+	box-shadow:  3px 0px 39px 36px rgb(14, 93, 158, 0.404)
+}
+
+#checkNosotros, #checkmenu, .checki{
+	display: none;
+}
+
+#checkNosotros:checked ~ .listul{
+	height: inherit;
+	padding-bottom: 20px;
+}
+
+
+/*Formulario*/
+
+#divescondido{
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 1;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.288);
+	transition: .5s ease;
+	animation: Aparecer .5s;
+}
+
+#Contactodiv{
+	position: relative;
+	width: 420px;
+	background-color: white;
+	border-radius: 20px;
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	transition: .5s ease;
+	overflow: hidden;
+}
+
+
+#equis{
+	position: absolute;
+	right: 30px;
+	top: 15px;
+	font-size: 15px;
+	font-family: monserat3;
+	cursor: pointer;
+}
+
+#equis:hover{
+	color: rgb(14, 93, 158);
+}
+
+.formulario{
+	text-align: center;
+	font-family: monserat3;
+}
+  
+  .formulario input{
+	background-color: #fbfbfb; 
+	width: 80%; 
+	height: 40px; 
+	border-radius: 5px;  
+	border-style: solid; 
+	border-width: 1px; 
+	border-color: rgb(14, 93, 158); 
+	margin-top: 10px;  
+	padding-left: 10px;
+	margin-bottom: 20px; 
+  } 
+  
+  .formulario label{
+	display: block; 
+	width: 80%;
+	margin: 0 auto;
+	text-align: left;
+  }
+  
+  .formulario button{
+	height: 45px;
+	padding-left: 5px;
+	padding-right: 5px;   
+	margin-bottom: 20px; 
+	margin-top: 10px;   
+	text-transform: uppercase;
+	background-color: rgb(14, 93, 158); 
+	border-color: rgb(14, 93, 158); 
+	border-style: solid; 
+	border-radius: 10px;  
+	width: 80%; 
+	cursor: pointer;
+  }
+  
+  
+  .formulario button p{
+	color: #fff; 
+  }
+  
+  
+  .aviso{
+	font-size: 13px;  
+	color: #0e0e0e;  
+  }
+  
+  
+  .formulario h1{
+	font-size: 30px;  
+	padding-bottom: 20px; 
+	color: rgb(14, 93, 158);
+  }
+  
+  
+  .formulario  h3{
+	font-size: 14px; 
+	padding-bottom: 30px;
+	color: #0e0e0e;   
+  }
+  
+  
+  .formulario p{
+	font-size: 14px; 
+	color: #0e0e0e; 
+  }
+
+#encabezado{
+	width: 100%;
+	height: 100vh;
+    text-align: center;
+    display: grid;
+    place-content: center;
+	/*box-shadow: 2px 10px 23px 5px rgba(0, 0, 0, 0.322);*/
+	
+	}
+
+#encabezado h2{
+		color: rgb(255, 255, 255);
+		font-family: monserat2;
+		width: 100%;
+		font-size: 60px;
+		margin: 20px auto;
+		text-transform: initial;
+	}
+
+#encabezado div {
+		align-items: center;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+}
+
+#BtnInfo{
+	color: white;
+	text-decoration: none;
+	font-family: monserat3;
+	width: 250px;
+	background-color:  rgb(14, 93, 158);
+	font-size: 15px;
+	margin-top: 20px;
+	margin-left: 10px;
+	border-radius: 15px;
+	transition: .5s ease;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border: none;
+	cursor: pointer;
+}
+
+#BtnInfo:hover{
+	color: rgb(14, 93, 158);
+	width: 270px;
+	background-color:  rgb(255, 255, 255);
+}
+
+#Btncontac{
+	color: rgb(14, 93, 158);
+	text-decoration: none;
+	font-family: monserat3;
+	width: 250px;
+	background-color:  rgb(255, 255, 255);
+	font-size: 15px;
+	margin-top: 20px;
+	margin-left: 10px;
+	border-radius: 15px;
+	transition: .5s ease;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border: none;
+	cursor: pointer;
+}
+
+#Btncontac:hover{
+	color: rgb(255, 255, 255);
+	width: 270px;
+	background-color:  rgb(14, 93, 158);
+}
+
+
+#cont{
+	width: 100%;
+	margin: 30px auto;
+	/*box-shadow: 0px 0px 36px -20px rgba(0,0,0,0.75);*/
+	border-radius: 30px;
+	/*background-color: rgb(255, 255, 255);*/
+}
+
+#infoh3{
+	font-family: monserat2;
+	width: 80%;
+	padding-top: 30px;
+	margin: 20px auto;
+	font-size: 35px;
+	text-align: center;
+	color:  rgb(255, 255, 255);	
+	-webkit-text-stroke: .5px black;
+}
+
+#info{
+	width: 100%; 
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding-bottom: 20px;
+}
+
+#QuienesContainer, #MisionContainer, #VisionContainer{
+	width: 340px;
+   
+    text-align: center;
+    overflow: hidden;
+    background-color:  rgb(14, 93, 158);
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+	color: white;
+	transition: ease .2s;
+
+}
+
+#QuienesContainer svg,#MisionContainer svg, #VisionContainer svg {
+	height: 80px;
+	margin-top: 20px;
+}
+
+#Quienes, #Mision, #Vision{
+	width: 90%;
+	margin: 0 auto;
+}
+
+#QuienesContainer:hover, #MisionContainer:hover, #VisionContainer:hover{
+	transform: translateY(-10px);
+}
+
+
+#Quienes h3, #Mision h3, #Vision h3{
+	font-family: monserat2;
+	font-size: 20px;
+	margin: 20px auto;
+}
+
+#Quienes p, #Mision p, #Vision p{
+	width: 95%;
+	margin: 20px auto;
+	font-family: monserat3;
+	font-size: 14px;
+
+}
+
+#lema{
+	width: 50%;
+	margin: 0 auto;
+	color: rgb(255, 255, 255);
+	font-size: 15px;
+	font-family: monserat3;
+	text-align: center;
+	font-weight: 100;
+	font-style: oblique;
+}
+
+#mapacontainer{
+	width: 100%;
+	overflow: hidden;
+}
+
+#Mapa{
+	display: flex;
+	flex-wrap: wrap;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	justify-content: center;
+}
+
+#MapaText{
+	display: block;
+	margin-bottom: 20px;
+	text-align: center;
+
+}
+
+#MapaText h3, #MapaText p{
+	width: 80%;
+	margin: 20px auto;
+}
+
+#MapaText img{
+	width: 40%;
+}
+
+#MapaText h3{
+	font-family: monserat2;
+	color:  rgb(255, 255, 255);	
+	-webkit-text-stroke: .5px black;
+}
+
+#MapaText p{
+	font-family: monserat3;
+	color:  rgb(255, 255, 255);	
+	-webkit-text-stroke: .5px black;
+}
+
+
+/* FOOTER */
+
+footer{
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(14, 93, 158);
+	box-shadow: 10px -1px 28px 5px rgb(14, 93, 158, 0.678);
+    height: auto;
+    width: 100%;
+    padding-top: 40px;
+	margin-top: 40px;
+    color: #fff;
+	position: relative;
+}
+#footerContenido{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+#footerContenido h3{
+	font-family: monserat2;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 3rem;
+}
+#footerContenido p{
+	font-family: monserat3;
+    max-width: 500px;
+    margin: 20px auto;
+    line-height: 1px;
+    font-size: 13.5px;
+}
+#Redes{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+	padding: 0;
+}
+#Redes li{
+    margin: 0 10px;
+}
+#Redes a{
+    text-decoration: none;
+    color: #fff;
+}
+#Redes a svg{
+    font-size: 30px;
+    transition: color .4s ease;
+
+}
+
+#infoh3:-moz-full-screen{
+	color: red;
+}
+
+
+/* Menciones web*/
+
+#imgDiv{
+	width: 80%;
+	overflow: auto;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#imgDiv img{
+	width: 600px;
+}
+
+#btns-menciones{
+	margin: 20px auto;
+	text-align: center;
+	padding-bottom: 60px;
+	columns: 2;
+	width: 50%;
+}
+
+#btns-menciones button{
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-left: 10px;
+	color: white;
+	text-decoration: none;
+	font-family: monserat3;
+	width: 250px;
+	background-color:  rgb(14, 93, 158);
+	border: none;
+	cursor: pointer;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-radius: 15px;
+} 
+
+/* Galeria */
+
+#imagenesdiv{
+	columns: 3;
+	width: 90%;
+	margin: 0 auto;
+}
+
+#imagenesdiv img{
+	width: 100%;
+	cursor: pointer;
+	margin: 5px auto;
+}
+
+#imagenesdiv img:hover{
+	transform: translateY(-10px);
+	transition: .5s ease;
+}
+
+#imgcontainer{
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 1;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.288);
+	transition: .5s ease;
+	animation: Aparecer .5s;
+}
+
+#imgcontainer img{
+	height: 500px;
+}
+
+/*Reseña */
+
+#resena{
+	width: 80%;
+	margin: 0 auto;
+	padding: 40px;
+	padding-top: 0px;
+}
+
+#resena p{
+	text-indent: 50px;
+	color: white;
+	line-height: 35px;
+	margin-top: 10px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-weight: 500;
+}
+
+@media screen and (max-width: 768px){
+
+	#membrete img{
+		width: 100%;
+	}
+	
+	#LgoA{
+		margin-left: 15px;
+		z-index: 10;
+		width: 60px;
+	}
+	.checki{
+		display: block;
+	}
+	.checki{    
+		font-size: 25px;
+		color: white;
+		margin-right: 20px;
+		cursor:pointer;
+		margin-top: -20px;
+		z-index: 10;
+		position: absolute;
+		right: 0;
+	}
+
+	#Contactodiv{
+		width: 90%;
+		margin: 0 auto;
+	}
+	
+	nav{
+		position: fixed;
+		display: block;
+		width: 100%;
+		height: 0vh;
+		top: 0;
+		background-color: rgb(14, 93, 158);
+		text-align: center;
+		transition: all .5s;
+		z-index: 8;
+		overflow: hidden;
+	}
+	
+	.navmenu a:first-child{
+		margin:80px auto;
+		margin-bottom: 20px;
+	}
+
+
+	.navmenu a, .navmenu label{
+		margin:30px auto;
+		transition: all .5s;
+		display: block;
+		font-size: 18px;
+	}
+
+	.listul {
+		position:relative;
+		margin-left: 0;
+		padding-bottom: 0px;
+		border-radius: none;
+		text-align: center;
+	}
+
+	.listul li{
+		padding-left: 0px;
+	}
+
+	.listul a{
+		margin: 30px auto !important;
+		font-weight: 500;
+	}
+	
+	#encabezado h2{
+		font-size: 45px;
+	}
+
+	#imagenesdiv{
+		columns: 1;
+		column-gap:10px;
+		z-index: 20;
+	}
+	#imagenesdiv img{
+		width: 100%;
+		margin-top: 20px;
+	}
+
+	#imgcontainer img{
+		width: 90%;
+    	margin: 0 auto;
+		height: inherit;
+	}
+
+	#btns-menciones{
+		columns: 1;
+		width: 100%;
+	}	
+
+	#btns-menciones button{
+		margin: 20 auto;
+	}
+
+	#imgDiv{
+		width: 100%;
+	}
+	
+	#imgDiv img{
+		width: 100%;
+	}
+}
+
+@keyframes Aparecer{
+    0% {width:0;}
+    100% {width:100%;}
+}
+
+
+#QuienesContainer svg, #MisionContainer svg, #VisionContainer svg, footer svg {
+	fill: #ffffff
+}
+
+.mapouter {
+	position: relative;
+	text-align: right;
+	height: 337px;
+	width: 532px;
+}
+
+.gmap_canvas {
+	overflow: hidden;
+	background: none !important;
+	height: 337px;
+	width: 532px;
+}
